@@ -74,20 +74,20 @@ export function Menu() {
           >
             <ChefHat
               className="w-8 h-8"
-              style={{ color: "var(--brand-orange)" }}
+              style={{ color: "var(--brand-yellow)" }}
             />
             <h2
               className="text-5xl font-bold"
-              style={{ color: "var(--brand-orange)" }}
+              style={{ color: "var(--brand-blue)" }}
             >
               Nuestro Menú
             </h2>
           </motion.div>
-          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Plato de pasta (ración generosa 140 g) con selección de 5 tipos de
             pasta (incluye 1 sin gluten) y 6 salsas.
             <br />
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-muted-foreground">
               Cada mes, el que menos rotación tiene se cambia para sacar siempre
               un nuevo menú
             </span>
@@ -112,7 +112,7 @@ export function Menu() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-gray-800 uppercase flex items-center gap-2">
+                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-foreground uppercase flex items-center gap-2">
                     Pasta
                     <Sparkles
                       className="w-5 h-5"
@@ -123,7 +123,7 @@ export function Menu() {
                     {pastaTypes.map((pasta, index) => (
                       <motion.div
                         key={index}
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                        className="flex items-center justify-between p-3 rounded-lg transition-colors group hover:bg-[var(--muted)]"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -133,7 +133,7 @@ export function Menu() {
                         }}
                         whileHover={{ x: 4 }}
                       >
-                        <span className="text-lg text-gray-700 font-medium group-hover:text-gray-900">
+                        <span className="text-lg text-muted-foreground font-medium group-hover:text-foreground">
                           {pasta.name}
                         </span>
                         <div className="flex gap-2">
@@ -174,7 +174,7 @@ export function Menu() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-gray-800 uppercase flex items-center gap-2">
+                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-foreground uppercase flex items-center gap-2">
                     Salsa
                     <Sparkles
                       className="w-5 h-5"
@@ -185,7 +185,7 @@ export function Menu() {
                     {sauceTypes.map((sauce, index) => (
                       <motion.div
                         key={index}
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                        className="flex items-center justify-between p-3 rounded-lg transition-colors group hover:bg-[var(--muted)]"
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -195,7 +195,7 @@ export function Menu() {
                         }}
                         whileHover={{ x: 4 }}
                       >
-                        <span className="text-lg text-gray-700 font-medium group-hover:text-gray-900">
+                        <span className="text-lg text-muted-foreground font-medium group-hover:text-foreground">
                           {sauce.name}
                         </span>
                         <div className="flex gap-2">
@@ -239,7 +239,7 @@ export function Menu() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <h3 className="text-xl font-bold mb-6 text-gray-800">
+                <h3 className="text-xl font-bold mb-6 text-foreground">
                   Precios
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -249,7 +249,7 @@ export function Menu() {
                       className={`flex justify-between items-center p-4 rounded-lg transition-all ${
                         item.highlight
                           ? "border-2 shadow-md"
-                          : "hover:bg-gray-50"
+                          : "hover:bg-[var(--muted)]"
                       }`}
                       style={
                         item.highlight
@@ -270,8 +270,8 @@ export function Menu() {
                       <span
                         className={`${
                           item.highlight
-                            ? "font-bold text-gray-900"
-                            : "text-gray-700"
+                            ? "font-bold text-foreground"
+                            : "text-muted-foreground"
                         }`}
                       >
                         {item.item}
@@ -302,7 +302,7 @@ export function Menu() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <h3 className="text-xl font-bold mb-6 text-gray-800">
+                <h3 className="text-xl font-bold mb-6 text-foreground">
                   Nuestros Platos
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -337,13 +337,13 @@ export function Menu() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.9 }}
         >
-          <p className="text-gray-600 mb-6 text-lg">
+          <p className="text-muted-foreground mb-6 text-lg">
             Cada plato está preparado al momento con ingredientes frescos de la
             mejor calidad
           </p>
-          <div className="inline-flex items-center gap-2 text-gray-500">
+          <div className="inline-flex items-center gap-2 text-muted-foreground">
             <motion.span
-              className="w-8 h-px bg-gray-300"
+              className="w-8 h-px bg-[var(--border)]"
               initial={{ width: 0 }}
               whileInView={{ width: 32 }}
               viewport={{ once: true }}
@@ -353,7 +353,7 @@ export function Menu() {
               140 gramos perfectos
             </span>
             <motion.span
-              className="w-8 h-px bg-gray-300"
+              className="w-8 h-px bg-[var(--border)]"
               initial={{ width: 0 }}
               whileInView={{ width: 32 }}
               viewport={{ once: true }}

@@ -83,18 +83,18 @@ export function About() {
             </motion.div>
 
             <motion.h2
-              className="text-4xl font-bold mb-6"
+              className="text-4xl font-bold mb-6 text-foreground"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <span style={{ color: "var(--brand-blue)" }}>Pasión</span>{" "}
-              <span className="text-gray-800">Italiana</span>
+              <span>Italiana</span>
             </motion.h2>
 
             <motion.p
-              className="text-lg text-gray-600 mb-6 leading-relaxed"
+              className="text-lg text-muted-foreground mb-6 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -107,7 +107,7 @@ export function About() {
             </motion.p>
 
             <motion.p
-              className="text-lg text-gray-600 mb-8 leading-relaxed"
+              className="text-lg text-muted-foreground mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -123,7 +123,8 @@ export function About() {
               {values.map((value, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                  className="flex items-start space-x-3 p-3 rounded-lg transition-colors group"
+                  style={{ backgroundColor: "transparent" }}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -135,10 +136,10 @@ export function About() {
                     style={{ color: "var(--brand-yellow)" }}
                   />
                   <div>
-                    <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h4 className="font-semibold text-foreground transition-colors group-hover:text-[var(--primary)]">
                       {value.title}
                     </h4>
-                    <p className="text-gray-600">{value.description}</p>
+                    <p className="text-muted-foreground">{value.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -161,7 +162,13 @@ export function About() {
                 alt="Chef preparando comida italiana fresca"
                 className="w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-3xl" />
+              <div
+                className="absolute inset-0 rounded-3xl"
+                style={{
+                  background:
+                    "linear-gradient(to top, color-mix(in oklch, var(--primary) 35%, black) 0%, transparent 70%)",
+                }}
+              />
             </motion.div>
           </motion.div>
         </div>
@@ -199,10 +206,12 @@ export function About() {
                   >
                     {stat.number}
                   </div>
-                  <h4 className="font-semibold text-gray-800 mb-2">
+                  <h4 className="font-semibold text-foreground mb-2">
                     {stat.label}
                   </h4>
-                  <p className="text-sm text-gray-600">{stat.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {stat.description}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>

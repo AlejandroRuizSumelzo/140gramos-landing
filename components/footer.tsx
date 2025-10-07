@@ -38,7 +38,14 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contacto" className="bg-gray-900 text-white pt-16 pb-8">
+    <footer
+      id="contacto"
+      className="pt-16 pb-8 text-[var(--primary-foreground)]"
+      style={{
+        background:
+          "color-mix(in oklch, var(--primary) 12%, black)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <motion.div
@@ -54,7 +61,7 @@ export function Footer() {
             >
               140gramos
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed text-[var(--brand-cream)]/90">
               Auténtica comida italiana en porciones perfectas. Sabor
               tradicional, servicio rápido, experiencia inolvidable.
             </p>
@@ -69,7 +76,7 @@ export function Footer() {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="p-2 hover:bg-gray-800 transition-colors"
+                    className="p-2 hover:bg-white/10 transition-colors"
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5" />
@@ -95,7 +102,7 @@ export function Footer() {
                 >
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center gap-2 group"
+                    className="transition-colors flex items-center gap-2 group text-[var(--brand-cream)]/90 hover:text-[var(--brand-yellow)]"
                   >
                     <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <span>{link.label}</span>
@@ -118,10 +125,10 @@ export function Footer() {
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <MapPin className="h-5 w-5 mt-1 text-gray-400 group-hover:text-yellow-400 transition-colors flex-shrink-0" />
+                <MapPin className="h-5 w-5 mt-1 transition-colors flex-shrink-0 text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-yellow)]" />
                 <div>
-                  <p className="text-gray-300">Av. Emprendimiento 1234</p>
-                  <p className="text-gray-300">Zargoza, España</p>
+                  <p className="text-[var(--brand-cream)]/90">Av. Emprendimiento 1234</p>
+                  <p className="text-[var(--brand-cream)]/90">Zargoza, España</p>
                 </div>
               </motion.div>
 
@@ -130,8 +137,8 @@ export function Footer() {
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <Phone className="h-5 w-5 text-gray-400 group-hover:text-yellow-400 transition-colors" />
-                <p className="text-gray-300">(+34) 1234-5678</p>
+                <Phone className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-yellow)]" />
+                <p className="text-[var(--brand-cream)]/90">(+34) 1234-5678</p>
               </motion.div>
 
               <motion.div
@@ -139,8 +146,8 @@ export function Footer() {
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <Mail className="h-5 w-5 text-gray-400 group-hover:text-yellow-400 transition-colors" />
-                <p className="text-gray-300">hola@140gramos.com</p>
+                <Mail className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-yellow)]" />
+                <p className="text-[var(--brand-cream)]/90">hola@140gramos.com</p>
               </motion.div>
             </div>
           </motion.div>
@@ -154,14 +161,14 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-lg">Horarios</h4>
             <div className="space-y-2 mb-6">
               <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300 text-sm">
+                <Clock className="h-4 w-4 text-[var(--brand-cream)]/70" />
+                <span className="text-[var(--brand-cream)]/90 text-sm">
                   Lun - Vie: 11:00 - 23:00
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300 text-sm">
+                <Clock className="h-4 w-4 text-[var(--brand-cream)]/70" />
+                <span className="text-[var(--brand-cream)]/90 text-sm">
                   Sáb - Dom: 12:00 - 24:00
                 </span>
               </div>
@@ -172,7 +179,11 @@ export function Footer() {
               <div className="flex space-x-2">
                 <Input
                   placeholder="Tu email"
-                  className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:ring-yellow-400"
+                  className="text-[var(--foreground)] placeholder:text-[var(--muted-foreground)] focus:ring-[var(--accent)]"
+                  style={{
+                    backgroundColor: "var(--input-background)",
+                    borderColor: "var(--border)",
+                  }}
                 />
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -193,7 +204,7 @@ export function Footer() {
           </motion.div>
         </div>
 
-        <Separator className="mb-8 bg-gray-700" />
+        <Separator className="mb-8 bg-[var(--border)]" />
 
         <motion.div
           className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
@@ -202,7 +213,7 @@ export function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="text-gray-400 text-sm">
+          <div className="text-[var(--brand-cream)]/70 text-sm">
             © 2025 140gramos. Todos los derechos reservados.
           </div>
 
@@ -211,7 +222,7 @@ export function Footer() {
               <motion.a
                 key={index}
                 href={link.href}
-                className="text-gray-400 hover:text-yellow-400 transition-colors"
+                className="transition-colors text-[var(--brand-cream)]/70 hover:text-[var(--brand-yellow)]"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
@@ -230,7 +241,8 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <motion.div
-            className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl"
+            className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl opacity-10"
+            style={{ backgroundColor: "var(--brand-yellow)" }}
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -258,7 +270,7 @@ export function Footer() {
           >
             ¡Haz tu primer pedido!
           </h3>
-          <p className="text-blue-100 mb-6">
+          <p className="mb-6" style={{ color: "var(--brand-cream)" }}>
             Descarga nuestra app y obtén 20% de descuento en tu primera orden
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -278,7 +290,7 @@ export function Footer() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+                className="border-[var(--primary-foreground)] text-[var(--primary-foreground)] hover:bg-[var(--primary-foreground)] hover:text-[var(--brand-blue)]"
               >
                 Pedir por WhatsApp
               </Button>

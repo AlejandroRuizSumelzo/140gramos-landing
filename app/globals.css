@@ -56,38 +56,38 @@
     Roboto, sans-serif;
   --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
 
-  /* Enhanced neutral palette with warm undertones (slightly darker) */
-  --background: #f2f0ec;
-  --foreground: #1a1816;
-  --card: #f8f6f2;
-  --card-foreground: #1a1816;
-  --popover: #f8f6f2;
-  --popover-foreground: #1a1816;
+  /* Burdeos & Marfil — Light theme */
+  --background: #F8F5F1;
+  --foreground: #201E1C;
+  --card: #FBF8F4;
+  --card-foreground: #201E1C;
+  --popover: #FBF8F4;
+  --popover-foreground: #201E1C;
 
-  /* Refined brand colors: navy (slightly lighter) */
-  --primary: #184089;
+  /* Brand */
+  --primary: #6A1F2B; /* burdeos */
   --primary-foreground: #ffffff;
-  --secondary: #d47e17;
-  --secondary-foreground: #1a1816;
-  --muted: #e9e6e1;
-  --muted-foreground: #58554e;
-  --accent: #e6c109;
-  --accent-foreground: #1a1816;
+  --secondary: #B9826E; /* cobre */
+  --secondary-foreground: #201E1C;
+  --muted: #EFE6E2;
+  --muted-foreground: #6A625C;
+  --accent: #C9A227; /* dorado */
+  --accent-foreground: #201E1C;
 
   /* System colors */
-  --destructive: #b91c1c;
+  --destructive: #B4231A;
   --destructive-foreground: #ffffff;
-  --success: #0a8a60;
+  --success: #157347;
   --success-foreground: #ffffff;
-  --warning: #c06f05;
-  --warning-foreground: #ffffff;
+  --warning: #B8891E;
+  --warning-foreground: #201E1C;
 
   /* Interface elements */
-  --border: #d9d5cf;
+  --border: #E7DDD4;
   --input: transparent;
-  --input-background: #efede8;
-  --switch-background: #bcb7af;
-  --ring: #184089;
+  --input-background: #F5F1EB;
+  --switch-background: #D6CEC5;
+  --ring: #6A1F2B;
 
   /* Typography weights */
   --font-weight-bold: 700;
@@ -95,85 +95,85 @@
   --font-weight-medium: 500;
   --font-weight-normal: 400;
 
-  /* Enhanced chart colors with coffee-inspired palette (navy primary) */
-  --chart-1: #7a4f35;
-  --chart-2: #184089;
-  --chart-3: #d47e17;
-  --chart-4: #0a8a60;
-  --chart-5: #b91c1c;
+  /* Charts aligned to palette */
+  --chart-1: #B9826E; /* cobre */
+  --chart-2: #6A1F2B; /* burdeos */
+  --chart-3: #C9A227; /* dorado */
+  --chart-4: #7A5A3C; /* brown */
+  --chart-5: #8C2E3A; /* dark red */
 
   /* Border radius */
   --radius: 0.75rem;
 
   /* Sidebar styling */
-  --sidebar: #f8f6f2;
-  --sidebar-foreground: #1a1816;
-  --sidebar-primary: #184089;
+  --sidebar: #FBF8F4;
+  --sidebar-foreground: #201E1C;
+  --sidebar-primary: #6A1F2B;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e9e6e1;
-  --sidebar-accent-foreground: #1a1816;
-  --sidebar-border: #d9d5cf;
-  --sidebar-ring: #184089;
+  --sidebar-accent: #EFE6E2;
+  --sidebar-accent-foreground: #201E1C;
+  --sidebar-border: #E7DDD4;
+  --sidebar-ring: #6A1F2B;
 
-  /* 140gramos enhanced brand colors (navy, slightly lighter) */
-  --brand-blue: #184089;
-  --brand-orange: #d47e17;
-  --brand-yellow: #e6c109;
-  --brand-white: #f2f0ec;
-  --brand-brown: #7a4f35;
-  --brand-cream: #e9e6e1;
+  /* 140gramos brand tokens mapped to Burdeos & Marfil */
+  --brand-blue: #6A1F2B;   /* "blue" como burdeos */
+  --brand-orange: #B9826E; /* cobre */
+  --brand-yellow: #C9A227; /* dorado */
+  --brand-white: #F8F5F1;  /* base marfil */
+  --brand-brown: #7A5A3C;
+  --brand-cream: #FBF8F4;
 }
 
 .dark {
-  /* Dark mode with sophisticated coffee house ambiance (deeper, brownish) */
-  --background: #12100e;
-  --foreground: #e8e6e1;
-  --card: #1a1613;
-  --card-foreground: #e8e6e1;
-  --popover: #1a1613;
-  --popover-foreground: #e8e6e1;
+  /* Burdeos & Marfil — Dark theme */
+  --background: #141112;
+  --foreground: #E8E6E1;
+  --card: #1B1718;
+  --card-foreground: #E8E6E1;
+  --popover: #1B1718;
+  --popover-foreground: #E8E6E1;
 
-  /* Adapted brand colors for dark mode (navy, slightly lighter) */
-  --primary: #2357b5;
+  /* Brand */
+  --primary: #882836; /* burdeos lucido */
   --primary-foreground: #ffffff;
-  --secondary: #e1892d;
-  --secondary-foreground: #0c0b0a;
-  --muted: #23211d;
-  --muted-foreground: #8c857a;
-  --accent: #d9c22f;
-  --accent-foreground: #0c0b0a;
+  --secondary: #A57261; /* cobre suave */
+  --secondary-foreground: #141112;
+  --muted: #262021;
+  --muted-foreground: #9A8E88;
+  --accent: #B8922B; /* dorado viejo */
+  --accent-foreground: #141112;
 
-  /* Dark mode system colors (slightly darker) */
-  --destructive: #dc4040;
+  /* System colors */
+  --destructive: #DD3B2F;
   --destructive-foreground: #ffffff;
-  --success: #0ea371;
+  --success: #148957;
   --success-foreground: #ffffff;
-  --warning: #d1870a;
-  --warning-foreground: #ffffff;
+  --warning: #B58624;
+  --warning-foreground: #141112;
 
-  /* Interface elements for dark mode (brownish neutrals) */
-  --border: #1f1b17;
-  --input: #1f1b17;
-  --input-background: #1a1613;
-  --switch-background: #322e29;
-  --ring: #2357b5;
+  /* Interface elements */
+  --border: #2A2425;
+  --input: #2A2425;
+  --input-background: #1B1718;
+  --switch-background: #322B2C;
+  --ring: #882836;
 
-  /* Dark mode chart colors (navy primary) */
-  --chart-1: #c99763;
-  --chart-2: #2357b5;
-  --chart-3: #e1892d;
-  --chart-4: #0ea371;
-  --chart-5: #dc4040;
+  /* Charts */
+  --chart-1: #A57261;
+  --chart-2: #882836;
+  --chart-3: #B8922B;
+  --chart-4: #745747;
+  --chart-5: #7A2F3C;
 
-  /* Dark sidebar */
-  --sidebar: #1a1613;
-  --sidebar-foreground: #e8e6e1;
-  --sidebar-primary: #2357b5;
+  /* Sidebar */
+  --sidebar: #1B1718;
+  --sidebar-foreground: #E8E6E1;
+  --sidebar-primary: #882836;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #201c18;
-  --sidebar-accent-foreground: #e8e6e1;
-  --sidebar-border: #1f1b17;
-  --sidebar-ring: #2357b5;
+  --sidebar-accent: #262021;
+  --sidebar-accent-foreground: #E8E6E1;
+  --sidebar-border: #2A2425;
+  --sidebar-ring: #882836;
 }
 
 @layer base {
