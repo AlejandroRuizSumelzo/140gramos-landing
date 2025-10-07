@@ -52,41 +52,42 @@
   --font-size: 16px;
 
   /* Typography system */
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
   --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
 
-  /* Enhanced neutral palette with warm undertones */
-  --background: #faf9f7;
+  /* Enhanced neutral palette with warm undertones (slightly darker) */
+  --background: #f2f0ec;
   --foreground: #1a1816;
-  --card: #ffffff;
+  --card: #f8f6f2;
   --card-foreground: #1a1816;
-  --popover: #ffffff;
+  --popover: #f8f6f2;
   --popover-foreground: #1a1816;
 
-  /* Refined brand colors with better balance */
-  --primary: #4318ff;
+  /* Refined brand colors: navy (slightly lighter) */
+  --primary: #184089;
   --primary-foreground: #ffffff;
-  --secondary: #f7931e;
+  --secondary: #d47e17;
   --secondary-foreground: #1a1816;
-  --muted: #f5f4f2;
-  --muted-foreground: #6b6962;
-  --accent: #ffd60a;
+  --muted: #e9e6e1;
+  --muted-foreground: #58554e;
+  --accent: #e6c109;
   --accent-foreground: #1a1816;
 
   /* System colors */
-  --destructive: #dc2626;
+  --destructive: #b91c1c;
   --destructive-foreground: #ffffff;
-  --success: #059669;
+  --success: #0a8a60;
   --success-foreground: #ffffff;
-  --warning: #d97706;
+  --warning: #c06f05;
   --warning-foreground: #ffffff;
 
   /* Interface elements */
-  --border: #e7e5e0;
+  --border: #d9d5cf;
   --input: transparent;
-  --input-background: #f9f8f6;
-  --switch-background: #d1cfc9;
-  --ring: #4318ff;
+  --input-background: #efede8;
+  --switch-background: #bcb7af;
+  --ring: #184089;
 
   /* Typography weights */
   --font-weight-bold: 700;
@@ -94,85 +95,85 @@
   --font-weight-medium: 500;
   --font-weight-normal: 400;
 
-  /* Enhanced chart colors with coffee-inspired palette */
-  --chart-1: #8b5a3c;
-  --chart-2: #4318ff;
-  --chart-3: #f7931e;
-  --chart-4: #059669;
-  --chart-5: #dc2626;
+  /* Enhanced chart colors with coffee-inspired palette (navy primary) */
+  --chart-1: #7a4f35;
+  --chart-2: #184089;
+  --chart-3: #d47e17;
+  --chart-4: #0a8a60;
+  --chart-5: #b91c1c;
 
   /* Border radius */
   --radius: 0.75rem;
 
   /* Sidebar styling */
-  --sidebar: #ffffff;
+  --sidebar: #f8f6f2;
   --sidebar-foreground: #1a1816;
-  --sidebar-primary: #4318ff;
+  --sidebar-primary: #184089;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f5f4f2;
+  --sidebar-accent: #e9e6e1;
   --sidebar-accent-foreground: #1a1816;
-  --sidebar-border: #e7e5e0;
-  --sidebar-ring: #4318ff;
+  --sidebar-border: #d9d5cf;
+  --sidebar-ring: #184089;
 
-  /* 140gramos enhanced brand colors */
-  --brand-blue: #4318ff;
-  --brand-orange: #f7931e;
-  --brand-yellow: #ffd60a;
-  --brand-white: #faf9f7;
-  --brand-brown: #8b5a3c;
-  --brand-cream: #f5f4f2;
+  /* 140gramos enhanced brand colors (navy, slightly lighter) */
+  --brand-blue: #184089;
+  --brand-orange: #d47e17;
+  --brand-yellow: #e6c109;
+  --brand-white: #f2f0ec;
+  --brand-brown: #7a4f35;
+  --brand-cream: #e9e6e1;
 }
 
 .dark {
-  /* Dark mode with sophisticated coffee house ambiance */
-  --background: #0f0e0d;
-  --foreground: #f5f4f2;
-  --card: #1a1816;
-  --card-foreground: #f5f4f2;
-  --popover: #1a1816;
-  --popover-foreground: #f5f4f2;
+  /* Dark mode with sophisticated coffee house ambiance (deeper, brownish) */
+  --background: #12100e;
+  --foreground: #e8e6e1;
+  --card: #1a1613;
+  --card-foreground: #e8e6e1;
+  --popover: #1a1613;
+  --popover-foreground: #e8e6e1;
 
-  /* Adapted brand colors for dark mode */
-  --primary: #5a2bff;
+  /* Adapted brand colors for dark mode (navy, slightly lighter) */
+  --primary: #2357b5;
   --primary-foreground: #ffffff;
-  --secondary: #ff9f3a;
-  --secondary-foreground: #0f0e0d;
-  --muted: #2a2722;
-  --muted-foreground: #9a9388;
-  --accent: #ffde3a;
-  --accent-foreground: #0f0e0d;
+  --secondary: #e1892d;
+  --secondary-foreground: #0c0b0a;
+  --muted: #23211d;
+  --muted-foreground: #8c857a;
+  --accent: #d9c22f;
+  --accent-foreground: #0c0b0a;
 
-  /* Dark mode system colors */
-  --destructive: #ef4444;
+  /* Dark mode system colors (slightly darker) */
+  --destructive: #dc4040;
   --destructive-foreground: #ffffff;
-  --success: #10b981;
+  --success: #0ea371;
   --success-foreground: #ffffff;
-  --warning: #f59e0b;
+  --warning: #d1870a;
   --warning-foreground: #ffffff;
 
-  /* Interface elements for dark mode */
-  --border: #2a2722;
-  --input: #2a2722;
-  --input-background: #1a1816;
-  --switch-background: #3d3a35;
-  --ring: #5a2bff;
+  /* Interface elements for dark mode (brownish neutrals) */
+  --border: #1f1b17;
+  --input: #1f1b17;
+  --input-background: #1a1613;
+  --switch-background: #322e29;
+  --ring: #2357b5;
 
-  /* Dark mode chart colors */
-  --chart-1: #d4a574;
-  --chart-2: #5a2bff;
-  --chart-3: #ff9f3a;
-  --chart-4: #10b981;
-  --chart-5: #ef4444;
+  /* Dark mode chart colors (navy primary) */
+  --chart-1: #c99763;
+  --chart-2: #2357b5;
+  --chart-3: #e1892d;
+  --chart-4: #0ea371;
+  --chart-5: #dc4040;
 
   /* Dark sidebar */
-  --sidebar: #1a1816;
-  --sidebar-foreground: #f5f4f2;
-  --sidebar-primary: #5a2bff;
+  --sidebar: #1a1613;
+  --sidebar-foreground: #e8e6e1;
+  --sidebar-primary: #2357b5;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #2a2722;
-  --sidebar-accent-foreground: #f5f4f2;
-  --sidebar-border: #2a2722;
-  --sidebar-ring: #5a2bff;
+  --sidebar-accent: #201c18;
+  --sidebar-accent-foreground: #e8e6e1;
+  --sidebar-border: #1f1b17;
+  --sidebar-ring: #2357b5;
 }
 
 @layer base {

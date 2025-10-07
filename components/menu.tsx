@@ -52,7 +52,10 @@ export function Menu() {
   ];
 
   return (
-    <section id="menu" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section
+      id="menu"
+      className="py-20 bg-gradient-to-b from-[var(--brand-white)] to-[var(--brand-cream)]"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -245,9 +248,19 @@ export function Menu() {
                       key={index}
                       className={`flex justify-between items-center p-4 rounded-lg transition-all ${
                         item.highlight
-                          ? "bg-gradient-to-r from-blue-50 to-yellow-50 border-2 border-yellow-300 shadow-md"
+                          ? "border-2 shadow-md"
                           : "hover:bg-gray-50"
                       }`}
+                      style={
+                        item.highlight
+                          ? {
+                              background:
+                                "linear-gradient(to right, color-mix(in oklch, var(--brand-blue) 15%, white), color-mix(in oklch, var(--brand-yellow) 20%, white))",
+                              borderColor:
+                                "color-mix(in oklch, var(--brand-yellow) 60%, white)",
+                            }
+                          : undefined
+                      }
                       initial={{ opacity: 0, scale: 0.95 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
