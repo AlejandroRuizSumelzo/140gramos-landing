@@ -83,11 +83,11 @@ export function Menu() {
               Nuestro Menú
             </h2>
           </motion.div>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-[var(--brand-blue)]/80 max-w-4xl mx-auto leading-relaxed">
             Plato de pasta (ración generosa 140 g) con selección de 5 tipos de
             pasta (incluye 1 sin gluten) y 6 salsas.
             <br />
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-[var(--brand-blue)]/70">
               Cada mes, el que menos rotación tiene se cambia para sacar siempre
               un nuevo menú
             </span>
@@ -101,8 +101,8 @@ export function Menu() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Card className="mb-12 border-0 shadow-xl">
-            <CardContent className="p-8 md:p-12">
+          <Card className="mb-12 border border-[var(--brand-cream)]/30 shadow-none rounded-2xl">
+            <CardContent className="p-8 md:p-10">
               {/* Pasta & Salsa Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
                 {/* Pasta Column */}
@@ -112,7 +112,7 @@ export function Menu() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-foreground uppercase flex items-center gap-2">
+                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-[var(--brand-blue)] uppercase flex items-center gap-2">
                     Pasta
                     <Sparkles
                       className="w-5 h-5"
@@ -123,7 +123,7 @@ export function Menu() {
                     {pastaTypes.map((pasta, index) => (
                       <motion.div
                         key={index}
-                        className="flex items-center justify-between p-3 rounded-lg transition-colors group hover:bg-[var(--muted)]"
+                        className="flex items-center justify-between p-3 rounded-lg transition-colors group hover:bg-[var(--brand-cream)]"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -133,7 +133,7 @@ export function Menu() {
                         }}
                         whileHover={{ x: 4 }}
                       >
-                        <span className="text-lg text-muted-foreground font-medium group-hover:text-foreground">
+                        <span className="text-lg text-[var(--brand-blue)]/70 font-medium group-hover:text-[var(--brand-blue)]">
                           {pasta.name}
                         </span>
                         <div className="flex gap-2">
@@ -174,7 +174,7 @@ export function Menu() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-foreground uppercase flex items-center gap-2">
+                  <h3 className="text-2xl font-bold mb-6 tracking-wide text-[var(--brand-blue)] uppercase flex items-center gap-2">
                     Salsa
                     <Sparkles
                       className="w-5 h-5"
@@ -185,7 +185,7 @@ export function Menu() {
                     {sauceTypes.map((sauce, index) => (
                       <motion.div
                         key={index}
-                        className="flex items-center justify-between p-3 rounded-lg transition-colors group hover:bg-[var(--muted)]"
+                        className="flex items-center justify-between p-3 rounded-lg transition-colors group hover:bg-[var(--brand-cream)]"
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -195,7 +195,7 @@ export function Menu() {
                         }}
                         whileHover={{ x: 4 }}
                       >
-                        <span className="text-lg text-muted-foreground font-medium group-hover:text-foreground">
+                        <span className="text-lg text-[var(--brand-blue)]/70 font-medium group-hover:text-[var(--brand-blue)]">
                           {sauce.name}
                         </span>
                         <div className="flex gap-2">
@@ -239,25 +239,23 @@ export function Menu() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <h3 className="text-xl font-bold mb-6 text-foreground">
+                <h3 className="text-xl font-bold mb-6 text-[var(--brand-blue)]">
                   Precios
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {pricing.map((item, index) => (
                     <motion.div
                       key={index}
                       className={`flex justify-between items-center p-4 rounded-lg transition-all ${
                         item.highlight
-                          ? "border-2 shadow-md"
-                          : "hover:bg-[var(--muted)]"
+                          ? "border-2"
+                          : "hover:bg-[var(--brand-cream)]"
                       }`}
                       style={
                         item.highlight
                           ? {
-                              background:
-                                "linear-gradient(to right, color-mix(in oklch, var(--brand-blue) 15%, white), color-mix(in oklch, var(--brand-orange) 20%, white))",
-                              borderColor:
-                                "color-mix(in oklch, var(--brand-orange) 60%, white)",
+                              backgroundColor: "var(--brand-cream)",
+                              borderColor: "var(--brand-blue)",
                             }
                           : undefined
                       }
@@ -265,13 +263,13 @@ export function Menu() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-                      whileHover={{ scale: item.highlight ? 1.02 : 1 }}
+                      whileHover={{ scale: item.highlight ? 1.01 : 1 }}
                     >
                       <span
                         className={`${
                           item.highlight
-                            ? "font-bold text-foreground"
-                            : "text-muted-foreground"
+                            ? "font-bold text-[var(--brand-blue)]"
+                            : "text-[var(--brand-blue)]/70"
                         }`}
                       >
                         {item.item}
@@ -302,7 +300,7 @@ export function Menu() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <h3 className="text-xl font-bold mb-6 text-foreground">
+                <h3 className="text-xl font-bold mb-6 text-[var(--brand-blue)]">
                   Nuestros Platos
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -337,11 +335,11 @@ export function Menu() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.9 }}
         >
-          <p className="text-muted-foreground mb-6 text-lg">
+          <p className="text-[var(--brand-blue)]/80 mb-6 text-lg">
             Cada plato está preparado al momento con ingredientes frescos de la
             mejor calidad
           </p>
-          <div className="inline-flex items-center gap-2 text-muted-foreground">
+          <div className="inline-flex items-center gap-2 text-[var(--brand-blue)]/70">
             <motion.span
               className="w-8 h-px bg-[var(--border)]"
               initial={{ width: 0 }}

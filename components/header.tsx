@@ -17,7 +17,7 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50"
+      className="bg-[var(--brand-white)]/95 backdrop-blur-sm shadow-sm sticky top-0 z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -42,7 +42,7 @@ export function Header() {
               <motion.a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-primary transition-colors relative"
+                className="text-[var(--brand-blue)]/80 hover:text-[var(--brand-blue)] transition-colors relative"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -50,7 +50,7 @@ export function Header() {
               >
                 {link.label}
                 <motion.span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-text-primary"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--brand-blue)]"
                   whileHover={{ width: "100%" }}
                   transition={{ duration: 0.3 }}
                 />
@@ -60,7 +60,7 @@ export function Header() {
 
           <div className="flex items-center space-x-4">
             <motion.div
-              className="hidden lg:flex items-center space-x-2 text-sm text-gray-600"
+              className="hidden lg:flex items-center space-x-2 text-sm text-[var(--brand-blue)]/70"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}

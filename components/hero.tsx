@@ -33,12 +33,12 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span style={{ color: "var(--brand-blue)" }}>Auténtica</span> <br />
-            <span className="text-gray-800">Comida Italiana</span> <br />
+            <span className="text-[var(--brand-blue)]">Comida Italiana</span> <br />
             <span style={{ color: "var(--brand-orange)" }}>en 140 gramos</span>
           </motion.h1>
 
           <motion.p
-            className="text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0"
+            className="text-xl text-[var(--brand-blue)]/80 mb-8 max-w-lg mx-auto lg:mx-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -50,7 +50,7 @@ export function Hero() {
 
           {/* Features */}
           <motion.div
-            className="flex flex-wrap gap-6 mb-8 justify-center lg:justify-start"
+            className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -58,12 +58,12 @@ export function Hero() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="flex items-center space-x-2"
-                whileHover={{ scale: 1.05, y: -2 }}
-                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="flex items-center gap-2"
+                whileHover={{ y: -1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <feature.icon className="h-5 w-5" style={{ color: feature.color }} />
-                <span className="text-sm font-medium">{feature.text}</span>
+                <feature.icon className="h-4 w-4" style={{ color: feature.color }} />
+                <span className="text-sm font-medium text-[var(--brand-blue)]/70">{feature.text}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -99,11 +99,8 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-3 border-2 w-full sm:w-auto"
-                style={{
-                  borderColor: "var(--brand-orange)",
-                  color: "var(--brand-blue)",
-                }}
+                className="px-8 py-3 w-full sm:w-auto border text-[var(--brand-blue)] hover:bg-[var(--brand-blue)] hover:text-[var(--brand-white)]"
+                style={{ borderColor: "var(--brand-blue)" }}
               >
                 Pedir por WhatsApp
               </Button>
@@ -130,33 +127,7 @@ export function Hero() {
             />
           </motion.div>
 
-          {/* Decorative elements */}
-          <motion.div
-            className="absolute -top-4 -right-4 w-32 h-32 rounded-full opacity-20 z-0"
-            style={{ backgroundColor: "var(--brand-orange)" }}
-            animate={{
-              scale: [1, 1.1, 1],
-              rotate: [0, 90, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-          <motion.div
-            className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full opacity-20 z-0"
-            style={{ backgroundColor: "var(--brand-blue)" }}
-            animate={{
-              scale: [1, 1.15, 1],
-              rotate: [0, -90, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
+          {/* Minimal: sin elementos decorativos animados */}
         </motion.div>
       </div>
     </section>

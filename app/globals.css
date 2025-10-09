@@ -49,130 +49,73 @@
 }
 
 :root {
-  --font-size: 16px;
-
-  /* Typography system */
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
-  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
-
-  /* Burdeos & Marfil — Light theme */
-  --background: #F8F5F1;
-  --foreground: #201E1C;
-  --card: #FBF8F4;
-  --card-foreground: #201E1C;
-  --popover: #FBF8F4;
-  --popover-foreground: #201E1C;
-
-  /* Brand */
-  --primary: #6A1F2B; /* burdeos */
-  --primary-foreground: #ffffff;
-  --secondary: #B9826E; /* cobre */
-  --secondary-foreground: #201E1C;
-  --muted: #EFE6E2;
-  --muted-foreground: #6A625C;
-  --accent: #C9A227; /* dorado */
-  --accent-foreground: #201E1C;
-
-  /* System colors */
-  --destructive: #B4231A;
-  --destructive-foreground: #ffffff;
-  --success: #157347;
-  --success-foreground: #ffffff;
-  --warning: #B8891E;
-  --warning-foreground: #201E1C;
-
-  /* Interface elements */
-  --border: #E7DDD4;
-  --input: transparent;
-  --input-background: #F5F1EB;
-  --switch-background: #D6CEC5;
-  --ring: #6A1F2B;
-
-  /* Typography weights */
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-
-  /* Charts aligned to palette */
-  --chart-1: #B9826E; /* cobre */
-  --chart-2: #6A1F2B; /* burdeos */
-  --chart-3: #C9A227; /* dorado */
-  --chart-4: #7A5A3C; /* brown */
-  --chart-5: #8C2E3A; /* dark red */
-
-  /* Border radius */
-  --radius: 0.75rem;
-
-  /* Sidebar styling */
-  --sidebar: #FBF8F4;
-  --sidebar-foreground: #201E1C;
-  --sidebar-primary: #6A1F2B;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #EFE6E2;
-  --sidebar-accent-foreground: #201E1C;
-  --sidebar-border: #E7DDD4;
-  --sidebar-ring: #6A1F2B;
-
-  /* 140gramos brand tokens mapped to Burdeos & Marfil */
-  --brand-blue: #6A1F2B;   /* "blue" como burdeos */
-  --brand-orange: #B9826E; /* cobre */
-  --brand-white: #F8F5F1;  /* base marfil */
-  --brand-brown: #7A5A3C;
-  --brand-cream: #FBF8F4;
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  /* Burdeos & Marfil — Dark theme */
-  --background: #141112;
-  --foreground: #E8E6E1;
-  --card: #1B1718;
-  --card-foreground: #E8E6E1;
-  --popover: #1B1718;
-  --popover-foreground: #E8E6E1;
-
-  /* Brand */
-  --primary: #882836; /* burdeos lucido */
-  --primary-foreground: #ffffff;
-  --secondary: #A57261; /* cobre suave */
-  --secondary-foreground: #141112;
-  --muted: #262021;
-  --muted-foreground: #9A8E88;
-  --accent: #B8922B; /* dorado viejo */
-  --accent-foreground: #141112;
-
-  /* System colors */
-  --destructive: #DD3B2F;
-  --destructive-foreground: #ffffff;
-  --success: #148957;
-  --success-foreground: #ffffff;
-  --warning: #B58624;
-  --warning-foreground: #141112;
-
-  /* Interface elements */
-  --border: #2A2425;
-  --input: #2A2425;
-  --input-background: #1B1718;
-  --switch-background: #322B2C;
-  --ring: #882836;
-
-  /* Charts */
-  --chart-1: #A57261;
-  --chart-2: #882836;
-  --chart-3: #B8922B;
-  --chart-4: #745747;
-  --chart-5: #7A2F3C;
-
-  /* Sidebar */
-  --sidebar: #1B1718;
-  --sidebar-foreground: #E8E6E1;
-  --sidebar-primary: #882836;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #262021;
-  --sidebar-accent-foreground: #E8E6E1;
-  --sidebar-border: #2A2425;
-  --sidebar-ring: #882836;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @layer base {

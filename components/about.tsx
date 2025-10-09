@@ -94,7 +94,7 @@ export function About() {
             </motion.h2>
 
             <motion.p
-              className="text-lg text-muted-foreground mb-6 leading-relaxed"
+              className="text-lg text-[var(--brand-blue)]/80 mb-6 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -107,7 +107,7 @@ export function About() {
             </motion.p>
 
             <motion.p
-              className="text-lg text-muted-foreground mb-8 leading-relaxed"
+              className="text-lg text-[var(--brand-blue)]/80 mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -136,10 +136,10 @@ export function About() {
                     style={{ color: "var(--brand-blue)" }}
                   />
                   <div>
-                    <h4 className="font-semibold text-foreground transition-colors group-hover:text-[var(--primary)]">
+                    <h4 className="font-semibold text-[var(--brand-blue)] transition-colors group-hover:text-[var(--brand-blue)]">
                       {value.title}
                     </h4>
-                    <p className="text-muted-foreground">{value.description}</p>
+                    <p className="text-[var(--brand-blue)]/70">{value.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -166,7 +166,7 @@ export function About() {
                 className="absolute inset-0 rounded-3xl"
                 style={{
                   background:
-                    "linear-gradient(to top, color-mix(in oklch, var(--primary) 35%, black) 0%, transparent 70%)",
+                    "linear-gradient(to top, color-mix(in oklch, var(--brand-blue) 35%, black) 0%, transparent 70%)",
                 }}
               />
             </motion.div>
@@ -206,10 +206,10 @@ export function About() {
                   >
                     {stat.number}
                   </div>
-                  <h4 className="font-semibold text-foreground mb-2">
+                  <h4 className="font-semibold text-[var(--brand-blue)] mb-2">
                     {stat.label}
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-[var(--brand-blue)]/70">
                     {stat.description}
                   </p>
                 </CardContent>

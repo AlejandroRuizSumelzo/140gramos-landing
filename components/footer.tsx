@@ -3,7 +3,6 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Separator } from "./ui/separator";
-import { Badge } from "./ui/badge";
 import {
   MapPin,
   Phone,
@@ -12,7 +11,6 @@ import {
   Instagram,
   Facebook,
   Twitter,
-  ArrowRight,
   Smartphone,
 } from "lucide-react";
 import { motion } from "motion/react";
@@ -40,10 +38,9 @@ export function Footer() {
   return (
     <footer
       id="contacto"
-      className="pt-16 pb-8 text-[var(--primary-foreground)]"
+      className="pt-16 pb-8 text-[var(--brand-cream)]"
       style={{
-        background:
-          "color-mix(in oklch, var(--primary) 12%, black)",
+        backgroundColor: "var(--brand-blue)",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,30 +53,28 @@ export function Footer() {
             transition={{ duration: 0.5 }}
           >
             <h3
-              className="text-2xl font-bold mb-4"
-              style={{ color: "var(--brand-orange)" }}
+              className="text-2xl font-bold mb-3 text-[var(--brand-cream)]"
             >
               140gramos
             </h3>
-            <p className="mb-6 leading-relaxed text-[var(--brand-cream)]/90">
+            <p className="mb-6 leading-relaxed text-[var(--brand-cream)]/80">
               Auténtica comida italiana en porciones perfectas. Sabor
               tradicional, servicio rápido, experiencia inolvidable.
             </p>
-            <div className="flex space-x-2">
+            <div className="flex gap-2">
               {socialLinks.map((social, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  whileHover={{ y: -2 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="p-2 hover:bg-white/10 transition-colors"
+                    className="p-2 border border-white/10 hover:bg-white/5 hover:border-white/20 transition-colors rounded-md"
                     aria-label={social.label}
                   >
-                    <social.icon className="h-5 w-5" />
+                    <social.icon className="h-5 w-5 text-[var(--brand-cream)]/80" />
                   </Button>
                 </motion.div>
               ))}
@@ -92,20 +87,21 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="font-semibold mb-4 text-lg">Enlaces Rápidos</h4>
+            <h4 className="text-sm uppercase tracking-wider text-[var(--brand-cream)]/70 mb-3 font-medium">
+              Enlaces rápidos
+            </h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <motion.li
                   key={index}
-                  whileHover={{ x: 4 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  whileHover={{ x: 2 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 22 }}
                 >
                   <a
                     href={link.href}
-                    className="transition-colors flex items-center gap-2 group text-[var(--brand-cream)]/90 hover:text-[var(--brand-orange)]"
+                    className="transition-colors text-[var(--brand-cream)]/80 hover:text-[var(--brand-cream)] hover:underline"
                   >
-                    <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span>{link.label}</span>
+                    {link.label}
                   </a>
                 </motion.li>
               ))}
@@ -118,36 +114,38 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="font-semibold mb-4 text-lg">Contacto</h4>
+            <h4 className="text-sm uppercase tracking-wider text-[var(--brand-cream)]/70 mb-3 font-medium">
+              Contacto
+            </h4>
             <div className="space-y-3">
               <motion.div
-                className="flex items-start space-x-3 group"
-                whileHover={{ x: 4 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="flex items-start gap-3 group"
+                whileHover={{ x: 2 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
               >
-                <MapPin className="h-5 w-5 mt-1 transition-colors flex-shrink-0 text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-orange)]" />
+                <MapPin className="h-5 w-5 mt-1 flex-shrink-0 text-[var(--brand-cream)]/60" />
                 <div>
-                  <p className="text-[var(--brand-cream)]/90">Av. Emprendimiento 1234</p>
-                  <p className="text-[var(--brand-cream)]/90">Zargoza, España</p>
+                  <p className="text-[var(--brand-cream)]/85">Av. Emprendimiento 1234</p>
+                  <p className="text-[var(--brand-cream)]/85">Zaragoza, España</p>
                 </div>
               </motion.div>
 
               <motion.div
-                className="flex items-center space-x-3 group"
-                whileHover={{ x: 4 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="flex items-center gap-3 group"
+                whileHover={{ x: 2 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
               >
-                <Phone className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-orange)]" />
-                <p className="text-[var(--brand-cream)]/90">(+34) 1234-5678</p>
+                <Phone className="h-5 w-5 text-[var(--brand-cream)]/60" />
+                <p className="text-[var(--brand-cream)]/85">(+34) 1234-5678</p>
               </motion.div>
 
               <motion.div
-                className="flex items-center space-x-3 group"
-                whileHover={{ x: 4 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="flex items-center gap-3 group"
+                whileHover={{ x: 2 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
               >
-                <Mail className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-orange)]" />
-                <p className="text-[var(--brand-cream)]/90">hola@140gramos.com</p>
+                <Mail className="h-5 w-5 text-[var(--brand-cream)]/60" />
+                <p className="text-[var(--brand-cream)]/85">hola@140gramos.com</p>
               </motion.div>
             </div>
           </motion.div>
@@ -158,43 +156,40 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h4 className="font-semibold mb-4 text-lg">Horarios</h4>
+            <h4 className="text-sm uppercase tracking-wider text-[var(--brand-cream)]/70 mb-3 font-medium">
+              Horarios
+            </h4>
             <div className="space-y-2 mb-6">
               <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 text-[var(--brand-cream)]/70" />
-                <span className="text-[var(--brand-cream)]/90 text-sm">
+                <Clock className="h-4 w-4 text-[var(--brand-cream)]/60" />
+                <span className="text-[var(--brand-cream)]/85 text-sm">
                   Lun - Vie: 11:00 - 23:00
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 text-[var(--brand-cream)]/70" />
-                <span className="text-[var(--brand-cream)]/90 text-sm">
+                <Clock className="h-4 w-4 text-[var(--brand-cream)]/60" />
+                <span className="text-[var(--brand-cream)]/85 text-sm">
                   Sáb - Dom: 12:00 - 24:00
                 </span>
               </div>
             </div>
 
             <div>
-              <h5 className="font-medium mb-3">Newsletter</h5>
-              <div className="flex space-x-2">
+              <h5 className="text-sm uppercase tracking-wider text-[var(--brand-cream)]/70 mb-2 font-medium">
+                Newsletter
+              </h5>
+              <div className="flex gap-2">
                 <Input
                   placeholder="Tu email"
-                  className="text-[var(--foreground)] placeholder:text-[var(--muted-foreground)] focus:ring-[var(--accent)]"
-                  style={{
-                    backgroundColor: "var(--input-background)",
-                    borderColor: "var(--border)",
-                  }}
+                  className="bg-transparent border border-[var(--brand-cream)]/20 text-[var(--brand-cream)] placeholder:text-[var(--brand-cream)]/50 focus-visible:ring-0 focus-visible:border-[var(--brand-cream)]/40"
                 />
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   <Button
                     size="sm"
-                    style={{
-                      backgroundColor: "var(--brand-blue)",
-                      color: "white",
-                    }}
+                    className="border border-[var(--brand-cream)] text-[var(--brand-cream)] bg-transparent hover:bg-[var(--brand-cream)] hover:text-[var(--brand-blue)]"
                   >
                     Suscribir
                   </Button>
@@ -204,7 +199,7 @@ export function Footer() {
           </motion.div>
         </div>
 
-        <Separator className="mb-8 bg-[var(--border)]" />
+        <Separator className="mb-8 bg-[var(--brand-cream)]/15" />
 
         <motion.div
           className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
@@ -222,9 +217,9 @@ export function Footer() {
               <motion.a
                 key={index}
                 href={link.href}
-                className="transition-colors text-[var(--brand-cream)]/70 hover:text-[var(--brand-orange)]"
-                whileHover={{ y: -2 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="transition-colors text-[var(--brand-cream)]/70 hover:text-[var(--brand-cream)] hover:underline"
+                whileHover={{ y: -1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
               >
                 {link.label}
               </motion.a>
@@ -233,65 +228,33 @@ export function Footer() {
         </motion.div>
 
         <motion.div
-          className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden"
-          style={{ backgroundColor: "var(--brand-blue)" }}
-          initial={{ opacity: 0, y: 30 }}
+          className="mt-12 p-6 rounded-xl text-center border border-[var(--brand-cream)]/15"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <motion.div
-            className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl opacity-10"
-            style={{ backgroundColor: "var(--brand-orange)" }}
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-
-          <Badge
-            className="mb-4"
-            style={{
-              backgroundColor: "var(--brand-orange)",
-              color: "white",
-            }}
-          >
-            Oferta Especial
-          </Badge>
-
-          <h3
-            className="text-2xl font-bold mb-2"
-            style={{ color: "var(--brand-white)" }}
-          >
+          <div className="text-xs uppercase tracking-wider text-[var(--brand-cream)]/60 mb-2">
+            Oferta especial
+          </div>
+          <h3 className="text-xl font-semibold mb-2 text-[var(--brand-cream)]">
             ¡Haz tu primer pedido!
           </h3>
-          <p className="mb-6" style={{ color: "var(--brand-cream)" }}>
+          <p className="mb-4 text-[var(--brand-cream)]/80">
             Descarga nuestra app y obtén 20% de descuento en tu primera orden
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button
-                variant="secondary"
-                className="gap-2"
-                style={{
-                  backgroundColor: "var(--brand-orange)",
-                  color: "white",
-                }}
+                variant="ghost"
+                className="gap-2 border border-[var(--brand-cream)] text-[var(--brand-cream)] hover:bg-[var(--brand-cream)] hover:text-[var(--brand-blue)]"
               >
                 <Smartphone className="w-4 h-4" />
                 Descargar App
               </Button>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                variant="outline"
-                className="border-[var(--primary-foreground)] text-[var(--primary-foreground)] hover:bg-[var(--primary-foreground)] hover:text-[var(--brand-blue)]"
-              >
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Button variant="link" className="text-[var(--brand-cream)] underline underline-offset-4">
                 Pedir por WhatsApp
               </Button>
             </motion.div>
