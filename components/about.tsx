@@ -74,7 +74,7 @@ export function About() {
                 variant="secondary"
                 className="mb-4"
                 style={{
-                  backgroundColor: "var(--brand-yellow)",
+                  backgroundColor: "var(--brand-orange)",
                   color: "var(--brand-blue)",
                 }}
               >
@@ -133,7 +133,7 @@ export function About() {
                 >
                   <CheckCircle2
                     className="w-6 h-6 mt-0.5 flex-shrink-0"
-                    style={{ color: "var(--brand-yellow)" }}
+                    style={{ color: "var(--brand-blue)" }}
                   />
                   <div>
                     <h4 className="font-semibold text-foreground transition-colors group-hover:text-[var(--primary)]">

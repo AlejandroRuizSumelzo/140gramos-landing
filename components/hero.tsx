@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 
 const features = [
   { icon: Clock, text: "Listo en 10 min", color: "var(--brand-blue)" },
-  { icon: Star, text: "4.8★ en reseñas", color: "var(--brand-yellow)" },
+  { icon: Star, text: "4.8★ en reseñas", color: "var(--brand-blue)" },
   { icon: Truck, text: "Delivery gratis", color: "var(--brand-blue)" },
 ];
 
@@ -34,7 +34,7 @@ export function Hero() {
           >
             <span style={{ color: "var(--brand-blue)" }}>Auténtica</span> <br />
             <span className="text-gray-800">Comida Italiana</span> <br />
-            <span style={{ color: "var(--brand-yellow)" }}>en 140 gramos</span>
+            <span style={{ color: "var(--brand-orange)" }}>en 140 gramos</span>
           </motion.h1>
 
           <motion.p
@@ -101,7 +101,7 @@ export function Hero() {
                 variant="outline"
                 className="px-8 py-3 border-2 w-full sm:w-auto"
                 style={{
-                  borderColor: "var(--brand-yellow)",
+                  borderColor: "var(--brand-orange)",
                   color: "var(--brand-blue)",
                 }}
               >
@@ -133,7 +133,7 @@ export function Hero() {
           {/* Decorative elements */}
           <motion.div
             className="absolute -top-4 -right-4 w-32 h-32 rounded-full opacity-20 z-0"
-            style={{ backgroundColor: "var(--brand-yellow)" }}
+            style={{ backgroundColor: "var(--brand-orange)" }}
             animate={{
               scale: [1, 1.1, 1],
               rotate: [0, 90, 0],

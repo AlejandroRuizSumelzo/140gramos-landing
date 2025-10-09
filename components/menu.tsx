@@ -74,7 +74,7 @@ export function Menu() {
           >
             <ChefHat
               className="w-8 h-8"
-              style={{ color: "var(--brand-yellow)" }}
+              style={{ color: "var(--brand-blue)" }}
             />
             <h2
               className="text-5xl font-bold"
@@ -116,7 +116,7 @@ export function Menu() {
                     Pasta
                     <Sparkles
                       className="w-5 h-5"
-                      style={{ color: "var(--brand-yellow)" }}
+                      style={{ color: "var(--brand-orange)" }}
                     />
                   </h3>
                   <div className="space-y-3">
@@ -154,8 +154,8 @@ export function Menu() {
                               variant="default"
                               className="text-xs"
                               style={{
-                                backgroundColor: "var(--brand-yellow)",
-                                color: "var(--brand-blue)",
+                                backgroundColor: "var(--brand-blue)",
+                                color: "white",
                               }}
                             >
                               Popular
@@ -178,7 +178,7 @@ export function Menu() {
                     Salsa
                     <Sparkles
                       className="w-5 h-5"
-                      style={{ color: "var(--brand-yellow)" }}
+                      style={{ color: "var(--brand-orange)" }}
                     />
                   </h3>
                   <div className="space-y-3">
@@ -216,8 +216,8 @@ export function Menu() {
                               variant="default"
                               className="text-xs"
                               style={{
-                                backgroundColor: "var(--brand-yellow)",
-                                color: "var(--brand-blue)",
+                                backgroundColor: "var(--brand-blue)",
+                                color: "white",
                               }}
                             >
                               Popular
@@ -255,9 +255,9 @@ export function Menu() {
                         item.highlight
                           ? {
                               background:
-                                "linear-gradient(to right, color-mix(in oklch, var(--brand-blue) 15%, white), color-mix(in oklch, var(--brand-yellow) 20%, white))",
+                                "linear-gradient(to right, color-mix(in oklch, var(--brand-blue) 15%, white), color-mix(in oklch, var(--brand-orange) 20%, white))",
                               borderColor:
-                                "color-mix(in oklch, var(--brand-yellow) 60%, white)",
+                                "color-mix(in oklch, var(--brand-orange) 60%, white)",
                             }
                           : undefined
                       }

@@ -2,7 +2,6 @@
 
 import { Button } from "./ui/button";
 import { Menu, Phone } from "lucide-react";
-import Image from "next/image";
 import { motion } from "motion/react";
 
 const navLinks = [
@@ -43,7 +42,7 @@ export function Header() {
               <motion.a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors relative"
+                className="text-gray-700 hover:text-primary transition-colors relative"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -51,7 +50,7 @@ export function Header() {
               >
                 {link.label}
                 <motion.span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-text-primary"
                   whileHover={{ width: "100%" }}
                   transition={{ duration: 0.3 }}
                 />
@@ -79,8 +78,8 @@ export function Header() {
               <Button
                 className="hidden sm:inline-flex"
                 style={{
-                  backgroundColor: "var(--brand-yellow)",
-                  color: "#030213",
+                  backgroundColor: "var(--brand-blue)",
+                  color: "white",
                 }}
               >
                 Pedir Ahora

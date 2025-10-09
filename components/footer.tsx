@@ -57,7 +57,7 @@ export function Footer() {
           >
             <h3
               className="text-2xl font-bold mb-4"
-              style={{ color: "var(--brand-yellow)" }}
+              style={{ color: "var(--brand-orange)" }}
             >
               140gramos
             </h3>
@@ -102,7 +102,7 @@ export function Footer() {
                 >
                   <a
                     href={link.href}
-                    className="transition-colors flex items-center gap-2 group text-[var(--brand-cream)]/90 hover:text-[var(--brand-yellow)]"
+                    className="transition-colors flex items-center gap-2 group text-[var(--brand-cream)]/90 hover:text-[var(--brand-orange)]"
                   >
                     <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <span>{link.label}</span>
@@ -125,7 +125,7 @@ export function Footer() {
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <MapPin className="h-5 w-5 mt-1 transition-colors flex-shrink-0 text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-yellow)]" />
+                <MapPin className="h-5 w-5 mt-1 transition-colors flex-shrink-0 text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-orange)]" />
                 <div>
                   <p className="text-[var(--brand-cream)]/90">Av. Emprendimiento 1234</p>
                   <p className="text-[var(--brand-cream)]/90">Zargoza, España</p>
@@ -137,7 +137,7 @@ export function Footer() {
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <Phone className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-yellow)]" />
+                <Phone className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-orange)]" />
                 <p className="text-[var(--brand-cream)]/90">(+34) 1234-5678</p>
               </motion.div>
 
@@ -146,7 +146,7 @@ export function Footer() {
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <Mail className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-yellow)]" />
+                <Mail className="h-5 w-5 transition-colors text-[var(--brand-cream)]/70 group-hover:text-[var(--brand-orange)]" />
                 <p className="text-[var(--brand-cream)]/90">hola@140gramos.com</p>
               </motion.div>
             </div>
@@ -192,8 +192,8 @@ export function Footer() {
                   <Button
                     size="sm"
                     style={{
-                      backgroundColor: "var(--brand-yellow)",
-                      color: "#030213",
+                      backgroundColor: "var(--brand-blue)",
+                      color: "white",
                     }}
                   >
                     Suscribir
@@ -222,7 +222,7 @@ export function Footer() {
               <motion.a
                 key={index}
                 href={link.href}
-                className="transition-colors text-[var(--brand-cream)]/70 hover:text-[var(--brand-yellow)]"
+                className="transition-colors text-[var(--brand-cream)]/70 hover:text-[var(--brand-orange)]"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
@@ -242,7 +242,7 @@ export function Footer() {
         >
           <motion.div
             className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl opacity-10"
-            style={{ backgroundColor: "var(--brand-yellow)" }}
+            style={{ backgroundColor: "var(--brand-orange)" }}
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -257,8 +257,8 @@ export function Footer() {
           <Badge
             className="mb-4"
             style={{
-              backgroundColor: "var(--brand-yellow)",
-              color: "var(--brand-blue)",
+              backgroundColor: "var(--brand-orange)",
+              color: "white",
             }}
           >
             Oferta Especial
@@ -279,8 +279,8 @@ export function Footer() {
                 variant="secondary"
                 className="gap-2"
                 style={{
-                  backgroundColor: "var(--brand-yellow)",
-                  color: "#030213",
+                  backgroundColor: "var(--brand-orange)",
+                  color: "white",
                 }}
               >
                 <Smartphone className="w-4 h-4" />
